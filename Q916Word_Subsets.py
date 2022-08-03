@@ -11,3 +11,4 @@ class wordSubsets:
         self.lst_words = [word for word in self.words if all(char in word for char in self.chars)]
 
         return print(self.lst_words)
+ 
