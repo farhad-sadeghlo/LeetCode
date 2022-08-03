@@ -22,5 +22,3 @@ class roman_to_integer:
                 i += 1
 
         return print(self.result)
-
-
