@@ -1,6 +1,3 @@
-import numpy as np
-from collections import defaultdict
-
 class validAnagram:
 
     def __init__(self):
