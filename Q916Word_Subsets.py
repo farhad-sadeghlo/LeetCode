@@ -3,8 +3,8 @@ class wordSubsets:
 
     def __init__(self, words, strings):
 
-        self.words = words.replace("]", "").replace("[", "").replace('"', '').split(',')
-        self.strings = strings.replace("]", "").replace("[", "").replace('"', '').split(',')
+        self.words = list(map(int, words.rstrip().split()))
+        self.strings = list(map(int, strings.rstrip().split()))
         self.lst_words = []
 
     def subsets(self):
