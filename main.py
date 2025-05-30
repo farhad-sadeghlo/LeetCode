@@ -12,8 +12,11 @@
 # from Q412_Fizz_Buzz import Solution
 # from Q876_Middle_of_the_Linked_List import Solution
 # from Q876_Middle_of_the_Linked_List import ListNode
-from Q383_RansomNote import Solution
-
+# from Q383_RansomNote import Solution
+# from Q21Merge_Two_Sorted_Lists import MergeTwoLinkedLists
+from Linked_List import LinkedList
+from Q21Merge_Two_Sorted_Lists import MergeTwoSortedLists
+from copy import deepcopy
 
 if __name__ == '__main__':
     # roman_to_integer(input('please type in your roman number: ')).romanToInt()
@@ -40,4 +43,38 @@ if __name__ == '__main__':
     # node4.next = node5
     # print(Solution().middleNode(node1))
     ############################################################
-    print(Solution().canConstruct(input('please type in your ransomNote: '), input('please type in your magazine: ')))
+    # print(Solution().canConstruct(input('please type in your ransomNote: '), input('please type in your magazine: ')))
+    ############################################################
+    # LinkedList
+    ll = LinkedList()
+    # lst = input('Please type in your list: ')
+    for val in sorted([2, 9, 1, 3, -2, 10, 99]):
+        ll.append(val)
+    l1 = deepcopy(ll)
+    print('This is your first linkedlist')
+    l1.print_list()
+
+    ll.reverse()
+    print('This is the reversed first linkedlist')
+    ll.print_list()
+
+    ll = LinkedList()
+    for val in sorted([5, 1, 4, 2, 125]):
+        ll.append(val)
+    l2 = deepcopy(ll)
+    print('This is your second linkedlist')
+    l2.print_list()
+
+
+    # print('This is a deepcopy of l1')
+    # l1.print_list()
+    # print('This is a deepcopy of l2')
+    # l2.print_list()
+    ll = LinkedList()
+    l3 = MergeTwoSortedLists(l1=l1.head, l2=l2.head).merge_two_list()
+    ll.head = l3
+    print('This is the merged linked list')
+    ll.print_list()
+
+    # print(MergeTwoLinkedLists(node1, node2).print_list())
+    # print(MergeTwoLinkedLists(input('please type in your first linked list: '), input('please type in your second linked list: ')).merge_two_sorted_linked_lists())
